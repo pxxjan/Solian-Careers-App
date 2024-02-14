@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solian Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        #banner {
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center mt-2 mb-4">Solian Careers</h1>
+        <img class="img-fluid" id="banner" src="static/banner.jpg" height="320" alt="">
+        <h2 class="text-center mt-2 mb-4">About Solian</h2>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, eaque aut voluptate obcaecati
+            totam sequi quasi doloribus, commodi fugit nostrum libero minus impedit aliquam voluptatem quidem maiores
+            mollitia! Quisquam, deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum incidunt laborum quisquam, ratione quas non expedita harum, iusto dolore voluptatum quae fuga reprehenderit. Aperiam minima pariatur. </p>
+        <h2 class="text-center">Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+               {% include 'jobitems.html'%}
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary btn-lg mt-4">Contact Us</button>
+            <p class="mt-4">Copyright 2024, Solian</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
