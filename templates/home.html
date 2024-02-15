@@ -13,32 +13,46 @@
             height: 360px;
             width: 100%;
             object-fit: cover;
+            margin-bottom: 16px;
         }
     </style>
 
 </head>
 
 <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="static/banner.jpg" height="320" alt="">
     <div class="container">
 
         <h1 class="text-center mt-2 mb-4">Solian Careers</h1>
-        <img class="img-fluid" id="banner" src="static/banner.jpg" height="320" alt="">
-        <h2 class="text-center mt-2 mb-4">About Solian</h2>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, eaque aut voluptate obcaecati
-            totam sequi quasi doloribus, commodi fugit nostrum libero minus impedit aliquam voluptatem quidem maiores
-            mollitia! Quisquam, deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum incidunt laborum quisquam, ratione quas non expedita harum, iusto dolore voluptatum quae fuga reprehenderit. Aperiam minima pariatur. </p>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, eaque aut voluptate obcaecati
+                    totam sequi quasi doloribus, commodi fugit nostrum libero minus impedit aliquam voluptatem quidem
+                    maiores
+                    mollitia! Quisquam, deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+                    cum
+                    incidunt laborum quisquam, ratione quas non expedita harum, iusto dolore voluptatum quae fuga
+                    reprehenderit. Aperiam minima pariatur.
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/people.jpg" style="height: 240px;" alt="">
+            </div>
+        </div>
         <h2 class="text-center">Job Openings</h2>
         <div>
             {% for job in jobs %}
-               {% include 'jobitems.html'%}
+            {% include 'jobitems.html'%}
             {% endfor %}
         </div>
         <div class="text-center">
             <button class="btn btn-primary btn-lg mt-4">Contact Us</button>
-            <p class="mt-4">Copyright 2024, Solian</p>
         </div>
 
     </div>
+    {% include 'footer.html' %}
 </body>
 
 </html>
