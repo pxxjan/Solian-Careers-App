@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, Table, MetaData
 
-db_path = r'C:\Users\Lenovo\OneDrive\Desktop\Demo App\sqlite\solian.db'
+db_path = r'C:\Users\Lenovo\OneDrive\Desktop\Flask App\sqlite\solian.db'
 
 engine = create_engine(f'sqlite:///{db_path}', echo=True)
 
