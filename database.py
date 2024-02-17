@@ -21,3 +21,16 @@ def load_jobs_from_db():
     rows_as_dicts = [dict(zip(column_names, row)) for row in rows]
 
     return rows_as_dicts
+
+def load_job_from_db(id):
+    with engine.connect() as conn:
+        query = table.select().where(table.c.id == id)
+        result = conn.execute(query)
+        row = result.fetchone()
+
+    if row is not None:
+        column_names = result.keys()
+        job_dict = dict(zip(column_names, row))
+        return job_dict
+    else:
+        return None
